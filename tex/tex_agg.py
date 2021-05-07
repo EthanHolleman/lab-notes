@@ -2,6 +2,17 @@
 import os
 from pathlib import Path
 from datetime import datetime
+import argparse
+
+def get_args():
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('experiment_dir', help='Path to experiment (chapter containing) dir.', default='experiments')
+    parser.add_argument('temp_dir', help='Path to temp directory to write temporary files.', default='temp')
+    parser.add_argument('output_dir', help='Path to output directory', default='notebook')
+
+    return parser.parse_args()
+    
 
 
 def collect_chapters(experiment_dir):
@@ -130,7 +141,9 @@ def convert_to_pdf(output_dir, notebook_tex):
 
 
 def main():
-    pass
+    args = get_args()
+    chapter_dict = collect_chapters(args.experiment_dir)
+
 
 
 if __name__ == '__main__':
