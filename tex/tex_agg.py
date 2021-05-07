@@ -70,6 +70,17 @@ def concatendate_chapter_content(temp_dir, chapter_name, chapter_md_files):
 
 
 def concatenated_chapter_to_tex(concat_md, output_dir, chapter_template):
+    '''Convert a concatenated chapter file to a tex file using
+    pandoc. Pandoc must be available in the PATH variable.
+
+    Args:
+        concat_md (Path): Path to concatenated chapter file.
+        output_dir (Path): Path to temp dir to write file to.
+        chapter_template (Path): Template tex file to use with pandoc.
+
+    Returns:
+        Path: Path to converted tex file.
+    '''
     chapter_tex = concat_md.with_suffix('.tex')
     cmd = f'pandoc -f markdown -r latex --template={chapter_template} {concat_md} {chapter_tex}'
     os.system(cmd)
@@ -77,6 +88,19 @@ def concatenated_chapter_to_tex(concat_md, output_dir, chapter_template):
 
 
 def add_chapters_to_book(chapter_concat_files, main_template, temp_dir):
+    '''Add paths to chapter files created by calling 
+    `concatenated_chapter_to_tex` to a main template tex file. The main
+    template tex file should have the string `$chapter$` where the include
+    chapter statements should be located.
+
+    Args:
+        chapter_concat_files (list): List of all chapter tex files in include.
+        main_template (Path): Path to tex book template.
+        temp_dir (Path): Temp dir to write book tex file to.
+
+    Returns:
+        Path: Path to book tex file.
+    '''
     main_template_str = open(str(main_template)).read()
     include_string = '\n'.join([
         f'\include{{{chapter_path.absolute()}}}' for chapter_path in chapter_concat_files
@@ -90,6 +114,16 @@ def add_chapters_to_book(chapter_concat_files, main_template, temp_dir):
 
 
 def convert_to_pdf(output_dir, notebook_tex):
+    '''Convert completed tex book file to a pdf using pdflatex. 
+    pdflatex must be available in PATH.
+
+    Args:
+        output_dir (Path): Path to directory to write pdf to.
+        notebook_tex (Path): Path to final tex book file.
+
+    Returns:
+        Path: Path to pdf file produced by pdflatex.
+    '''
     cmd = f'pdflatex {notebook_tex} -output-directory={output_dir}'
     os.system(cmd)
     return output_dir
