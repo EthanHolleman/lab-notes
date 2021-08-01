@@ -1,0 +1,17 @@
+LOCUS       strong_init              212 bp    DNA     linear   UNK 01-JAN-1980
+DEFINITION  SEGUID_sZPLBed_0CfikQ2D8WQiAosxnV4.
+ACCESSION   id
+VERSION     id
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     misc            7..206
+                     /label="Placeholder strong initiator"
+ORIGIN
+        1 aagctttact ctcataaaga gcgcataata agacgggacg caatcacaga cctacactta
+       61 ataaactttt gttaacggat cctcgcgagc ttttaacgaa gtcacgggct tgataaactt
+      121 gggccgcaac catctaagag ggtctttggg gtggtcttca ccagtatatt cccctactcc
+      181 tcgcgctaag cgagggaaga acccgtgaat tc
+//
