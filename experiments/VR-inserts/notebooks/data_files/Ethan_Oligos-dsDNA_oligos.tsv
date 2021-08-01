@@ -1,0 +1,8 @@
+Name	Sequence 	Date created	Date ordered	Order details	Purification	Scale	Notes	Lab notebook	Storage location	Arrival Date	Empty
+pFC8tac_tac_promoter_Primer_1	gcagaacggcacaacagc	7/29/21	7/29/21	146853411	STD	25nm	Amplifies tac promoter of pFC plasmids	7-29-21.md			FALSE
+pFC8tac_tac_promoter_Primer_2	gtattaccgcctttgagtgagctg	7/29/21	7/29/21	146853411	STD	25nm	Amplifies tac promoter of pFC plasmids	7-29-21.md			FALSE
+pFC9_t7_primer_1	cccgccgcgcttaatg	7/29/21	7/29/21	146853411	STD	25nm	Amplfies t7 promoter of pFC plasmids	7-29-21.md			FALSE
+pFC9_t7_primer_2	gccccaatgcgagcgg	7/29/21	7/29/21	146853411	STD	25nm	Amplfies t7 promoter of pFC plasmids	7-29-21.md			FALSE
+pFC8_t7_primer_2	gaaggggcagtagcacagtcc	7/29/21	7/29/21	146853411	STD	25nm	Amplifies t7 promoter of pFC8 when used with pFC9_t7_primer_1	7-29-21.md			FALSE
+Variable_region_insert_primer_1	tacgactcactatagggcgaattgg	7/29/21	7/29/21	146853411	STD	25nm	Amplfies any variable region insert fragment	7-29-21.md			FALSE
+Variable_region_insert_primer_2	cctcctcgcctcggtcac	7/29/21	7/29/21	146853411	STD	25nm	Amplfies any variable region insert fragment	7-29-21.md			FALSE
