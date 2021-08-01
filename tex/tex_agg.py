@@ -143,6 +143,7 @@ def convert_to_pdf(output_dir, notebook_tex):
 def main():
     args = get_args()
     chapter_dict = collect_chapters(args.experiment_dir)
+    print(list(chapter_dict.keys()))
 
 
 

@@ -1,29 +1,48 @@
-\documentclass[a4paper,12pt]{book}
-\usepackage[utf8]{inputenc}
+\documentclass[11pt]{book}
+\usepackage{geometry}
+\usepackage{longtable}
 \usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{fancyvrb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage[table]{xcolor}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{titlesec}
+%\titlespacing\section{1pt}{12pt plus 2pt minus 2pt}{1pt plus 2pt minus 2pt}
+%\titlespacing\subsection{1pt}{12pt plus 2pt minus 2pt}{pt plus 2pt minus 2pt}
+%\titlespacing\subsubsection{5pt}{12pt plus 2pt minus 2pt}{1pt plus 2pt minus 2pt}
+%\usepackage{float}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{float}
+\setcounter{tocdepth}{4}
+\urlstyle{same}
+\geometry{margin=0.5in}
+%opening
+%\titleformat*{\section}{\small\bfseries}
+\bibliographystyle{unsrt}
+\author{Ethan Holleman}
+\title{Variable region insert design and cloning strategies}
 
-\usepackage{titlesec}
-
-
-\titleformat{\chapter}[display]
-{\normalfont\bfseries}{}{0pt}{\Large}
-
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 \begin{document}
 
-\author{TeXstudio Team}
-\title{Simple Book Example}
-\date{January 2013}
-
-\frontmatter
 \maketitle
+%\begin{abstract}
+%	Abstract text here
+%\end{abstract}
+
 \tableofcontents
+\pagebreak
 
-\mainmatter
-
-$chapters$
-
-\backmatter
-% bibliography, glossary and index would go here.
+$body$
 
 \end{document}
