@@ -1,13 +1,39 @@
+\documentclass[11pt]{article}
 \usepackage{geometry}
-\usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{float}
-\usepackage{longtable}
+\usepackage{fancyvrb}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\usepackage[table]{xcolor}
+\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{titlesec}
+%\titlespacing\section{1pt}{12pt plus 2pt minus 2pt}{1pt plus 2pt minus 2pt}
+%\titlespacing\subsection{1pt}{12pt plus 2pt minus 2pt}{pt plus 2pt minus 2pt}
+%\titlespacing\subsubsection{5pt}{12pt plus 2pt minus 2pt}{1pt plus 2pt minus 2pt}
+%\usepackage{float}
 \usepackage{booktabs}
-\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{float}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan
+}
+\setcounter{tocdepth}{4}
+\urlstyle{same}
+\geometry{margin=0.5in}
+%opening
+%\titleformat*{\section}{\small\bfseries}
+\bibliographystyle{unsrt}
 
-\chapter{}
 
-$main$
-
+\begin{document}
+\chapter{$title$}
+$body$
