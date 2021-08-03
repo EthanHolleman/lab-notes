@@ -182,7 +182,7 @@ class Notebook():
             # update template path 
         ]
         print(' '.join(cmd))
-        subprocess.call(cmd)
+        os.system(' '.join(cmd))
 
 
 

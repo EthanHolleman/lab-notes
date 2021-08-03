@@ -53,9 +53,11 @@ def test_combine_entries(chapters):
         output_path = each_chapter.combine_entries()
         assert output_path.is_file()
         assert len(open(str(output_path)).read())
-        #os.remove(str(output_path))
+        os.remove(str(output_path))
+
 
 def test_notebook(chapters, notebook_path):
     notebook = Notebook(chapters, notebook_path)
     notebook.write_notebook()
     assert notebook_path.is_file()
+    os.remove(str(notebook_path))
